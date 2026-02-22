@@ -1,46 +1,10 @@
----
-title: Reference
-hideTOC: true
----
-
-import { BookOpen02Icon } from '@expo/styleguide-icons/outline/BookOpen02Icon';
-
-import { BoxLink } from '~/ui/components/BoxLink';
-import { Collapsible } from '~/ui/components/Collapsible';
-import RedirectNotification from '~/ui/components/RedirectNotification';
-import {
-  AndroidIOSCompatibilityTable,
-  ReactNativeCompatibilityTable,
-} from '~/ui/components/SDKTables';
-import { Terminal } from '~/ui/components/Snippet';
-import { CODE } from '~/ui/components/Text';
-
-<RedirectNotification>
-  The page you are looking for does not exist in this SDK version. It may have been deprecated or
-  added to a newer SDK version.
-</RedirectNotification>
-
-The Expo SDK provides access to device and system functionality such as contacts, camera, gyroscope, GPS location, and so on, in the form of packages. You can install any Expo SDK package using the `npx expo install` command. For example, three different packages are installed using the following command:
-
-<Terminal cmd={['$ npx expo install expo-camera expo-contacts expo-sensors']} />
-
-After installing one or more packages, you can import them into your JavaScript code:
-
-```js
-import { CameraView } from 'expo-camera';
-import * as Contacts from 'expo-contacts';
-import { Gyroscope } from 'expo-sensors';
-```
-
-This allows you to write [`Contacts.getContactsAsync()`](./sdk/contacts#contactsgetcontactsasynccontactquery) and read the contacts from the device, read the gyroscope sensor to detect device movement, or start the phone's camera and take photos.
-
-## All Expo SDK packages work in any React Native app
-
-Expo apps are React Native apps, so all Expo SDK packages work in any React Native app with the `expo` package installed and configured. The easiest way to create a React Native app with support for Expo SDK packages is to use `create-expo-app`. However, you can also add Expo SDK support to an existing React Native app with the `npx install-expo-modules` command.
-
-<Terminal
-  cmd={['# Create a project named my-app', '$ npx create-expo-app my-app --template bare-minimum']}
-  cmdCopy="npx create-expo-app my-app --template bare-minimum"
+@react-navigation/native
+@react-navigation/bottom-tabs
+react-native-gesture-handler
+react-native-reanimated
+react-native-safe-area-context
+react-native-screens
+@expo/vector-icons  cmdCopy="npx create-expo-app my-app --template bare-minimum"
 />
 
 <BoxLink
